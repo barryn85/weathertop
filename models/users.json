@@ -1,0 +1,19 @@
+{
+  "file": "./models/users.json",
+  "users": [
+    {
+      "firstName": "frodo",
+      "lastName": "baggins",
+      "email": "fbaggins@shire.com",
+      "password": "ring",
+      "_id": "0550e567-2399-4a29-8987-d1906dd677e0"
+    },
+    {
+      "firstName": "barry",
+      "lastName": "nolan",
+      "email": "barrynolan@shire.com",
+      "password": "frodo",
+      "_id": "57bdb87f-3900-48df-96da-b4a4fc29c446"
+    }
+  ]
+}

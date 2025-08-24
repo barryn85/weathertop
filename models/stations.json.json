@@ -1,0 +1,30 @@
+{
+  "file": "./models/stations.json.json",
+  "stations.json": [],
+  "stations": [
+    {
+      "title": "wexford",
+      "userid": "0550e567-2399-4a29-8987-d1906dd677e0",
+      "_id": "00401a5c-45ad-432f-a322-92a3f94c981c",
+      "reports": []
+    },
+    {
+      "title": "tramore",
+      "userid": "57bdb87f-3900-48df-96da-b4a4fc29c446",
+      "_id": "b115182e-da93-405d-97c9-c7bd79262188",
+      "reports": []
+    },
+    {
+      "title": "wexford",
+      "userid": "57bdb87f-3900-48df-96da-b4a4fc29c446",
+      "_id": "9c1cea0d-1856-407d-8681-71f087d8ce7a",
+      "reports": []
+    },
+    {
+      "title": "dublin",
+      "userid": "0550e567-2399-4a29-8987-d1906dd677e0",
+      "_id": "8ed03c0a-ba8e-4f68-a773-d6c9d3dfda93",
+      "reports": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "file": "./models/stations.json.json",
+  "stations.json": [],
+  "stations": [
+    {
+      "title": "Tramore",
+      "_id": "ac08c8ea-c6ec-4edf-817f-c1a9318780fb",
+      "reports": []
+    },
+    {
+      "title": "Wexford",
+      "_id": "9d264ab9-375f-40c8-a32a-5756c941f2a3",
+      "reports": []
+    }
+  ]
+}

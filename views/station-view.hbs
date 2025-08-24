@@ -1,0 +1,44 @@
+{{> menu active="dashboard"}}
+
+<section class="section">
+  <h2 class="title is-2">{{station.title}} ({{station.city}})</h2>
+
+  <!-- Add new weather report -->
+  <form action="/station/{{station._id}}/addreport" method="POST" class="mb-3">
+    <button class="button is-link">Add Weather Report</button>
+  </form>
+
+  <!-- Reports table -->
+  {{#if station.reports.length}}
+  <table class="table is-fullwidth is-striped">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Temperature (°C)</th>
+        <th>Wind Speed (m/s)</th>
+        <th>Wind Direction (°)</th>
+        <th>Pressure (hPa)</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each station.reports}}
+      <tr>
+        <td>{{code}}</td>
+        <td>{{temperature}}</td>
+        <td>{{windSpeed}}</td>
+        <td>{{windDirection}}</td>
+        <td>{{pressure}}</td>
+        <td>
+          <a href="/station/{{../station._id}}/deletereport/{{_id}}" class="button is-danger is-small">Delete</a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+    <p>No reports yet for this station.</p>
+  {{/if}}
+<a href="/dashboard" class="button is-light mt-3">Back to Dashboard</a>
+  
+</section>
