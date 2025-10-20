@@ -3,7 +3,7 @@ import { reportStore } from "../models/report-store.js";
 export const reportController = {
   async addReport(request, response) {
     const stationId = request.params.id;
-    // expects a simple form with these names
+    
     const report = {
       code: request.body.code,
       temperature: Number(request.body.temperature),
