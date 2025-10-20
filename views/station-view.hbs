@@ -8,6 +8,18 @@
     <button class="button is-link">Add Weather Report</button>
   </form>
 
+  {{#if latestReport}}
+  <div class="box has-background-light">
+    <h3 class="title is-4">Latest Weather</h3>
+    <div class="columns">
+      <div class="column"><strong>Code:</strong> {{latestReport.code}}</div>
+      <div class="column"><strong>Temperature:</strong> {{latestReport.temperature}} °C</div>
+      <div class="column"><strong>Wind:</strong> {{latestReport.windSpeed}} m/s @ {{latestReport.windDirection}}°</div>
+      <div class="column"><strong>Pressure:</strong> {{latestReport.pressure}} hPa</div>
+    </div>
+  </div>
+  {{/if}}
+  
   <!-- Reports table -->
   {{#if station.reports.length}}
   <table class="table is-fullwidth is-striped">
