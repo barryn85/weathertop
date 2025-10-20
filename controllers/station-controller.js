@@ -3,7 +3,7 @@ import { reportStore } from "../models/report-store.js";
 import axios from "axios";
 
 export const stationController = {
-  // Show one station and its reports
+  
   async index(request, response) {
     const station = await stationStore.getStationById(request.params.id);
     if (!station) return response.redirect("/dashboard");
@@ -14,14 +14,14 @@ export const stationController = {
     response.render("station-view", { title: station.title, station });
   },
 
-  // Add a weather report using OpenWeather API
+  
   async addReport(request, response) {
     const station = await stationStore.getStationById(request.params.id);
     if (!station) return response.redirect("/dashboard");
 
     const city = station.city || "Tramore";
 
-    // 🟢 Your API key here
+    
     const apiKey = "8db3d97e7df66a1775c8299c854aede9";
 
     const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
