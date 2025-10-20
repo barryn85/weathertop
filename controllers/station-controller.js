@@ -14,7 +14,7 @@ export const stationController = {
     response.render("station-view", { title: station.title, station });
   },
 
-  
+  // Add repport
   async addReport(request, response) {
     const station = await stationStore.getStationById(request.params.id);
     if (!station) return response.redirect("/dashboard");
