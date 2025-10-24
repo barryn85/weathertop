@@ -37,7 +37,7 @@ export const stationController = {
           windSpeed: data.wind.speed,
           windDirection: data.wind.deg,
           pressure: data.main.pressure,
-          stationid: station._id, // lowercase to match your report-store.js
+          stationid: station._id, 
         };
       }
     } catch (err) {
