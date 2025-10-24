@@ -11,7 +11,7 @@ export const stationStore = {
 
   async addObject(object) {
     await db.read();
-    station._id = v4();
+    object._id = v4();
     db.data.objects.push(object);
     await db.write();
     return object;
@@ -19,11 +19,11 @@ export const stationStore = {
 
   async getObjectById(id) {
     await db.read();
-    const list = db.data.objects.find((object) => object._id === id);
+    const object = db.data.objects.find((object) => object._id === id);
     return list;
   },
 
-  async deleteobjectById(id) {
+  async deleteObjectById(id) {
     await db.read();
     const index = db.data.objects.findIndex((object) => object._id === id);
     db.data.objects.splice(index, 1);
@@ -31,7 +31,7 @@ export const stationStore = {
   },
 
   async deleteAllObjects() {
-    db.data.objectss = [];
+    db.data.objects = [];
     await db.write();
   },
 };
